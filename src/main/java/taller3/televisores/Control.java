@@ -27,4 +27,12 @@ public class Control {
 	public void setCanal(int canal) {
 		tv.setCanal(canal);
 	}
+	
+	public TV getTv(){
+		return this.tv;
+	}
+	public void setTv(TV tv) {
+		this.tv=tv;
+	}
+	
 }

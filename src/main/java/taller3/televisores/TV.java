@@ -1,19 +1,19 @@
 package taller3.televisores;
 
 public class TV {
-	private Marca marca;
+	Marca marca;
 	int     canal   = 1;
 	int     precio  = 500;
 	int     volumen = 1;
 	boolean estado;
-	private Control control;
-	static int numTV=0;
+	Control control;
+	static int numTv=0;
 	
-	//constructor
+	
 	public TV(Marca Mark,boolean state) {
 		marca  = Mark;
 		estado = state;
-		numTV+=1;
+		numTv+=1;
 	}
 	//marca 
 	public Marca getMarca() {
@@ -48,7 +48,7 @@ public class TV {
 	}
 	
 	public void setVolumen(int Volumen) {
-		if(this.estado==true && Volumen>=0 && Volumen<=7) {
+		if(this.estado==true && Volumen<=7) {
 			this.volumen = Volumen;
 		}
 		
@@ -60,14 +60,14 @@ public class TV {
 	}
 		
 	public void setCanal(int Canal) {
-		if(this.estado==true && Canal>=1 && Canal<=120) {
+		if(this.estado==true && Canal<=120) {
 			this.canal = Canal;
 		}
 		
 	}
 	
 	public static int getNumTV() {
-		return numTV;
+		return numTv;
 	}
 	
 	public void turnOn() {
@@ -81,28 +81,31 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		if(this.estado==true && canal>=1 && canal<=120) {
+		if(this.estado==true && canal<120) {
 			this.canal+=1;
 		}
 	}
 	public void canalDown() {
-		if(this.estado==true && canal>=1 && canal<=120) {
+		if(this.estado==true && canal>1) {
 			this.canal-=1;
 		}
 	}
 	
 	public void volumenUp() {
-		if(this.estado=true && volumen>=0 && volumen<=7) {
+		if(this.estado=true && volumen<=7) {
 			this.volumen+=1;
 		}
 	}
 	
 	public void volumenDown() {
-		if(this.estado=true && volumen>=0 && volumen<=7) {
+		if(this.estado=true && volumen>0) {
 			this.volumen-=1;
 		}
 	}
 	
+	public static void setNumTV(int num) {
+		numTv=num;
+	}
 }
 	
 	
