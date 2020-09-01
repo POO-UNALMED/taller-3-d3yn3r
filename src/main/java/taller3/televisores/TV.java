@@ -102,8 +102,8 @@ public class TV {
 		}
 	}
 	
-	/*public static void setNumTV(int num) {
+	public static void setNumTV(int num) {
 		numTv=num;
-	}*/
+	}
 }
 	
